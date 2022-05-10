@@ -47,7 +47,6 @@ export default class Contracts {
           setTimeout( () => {
             document.getElementById(tab).click();
           }, 1000)
-
       }
     })
   }
@@ -140,7 +139,6 @@ export default class Contracts {
 
         var rect = el.getBoundingClientRect();
 
-
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&
@@ -166,7 +164,9 @@ export default class Contracts {
         })
 
       carrierBlock.onclick = (e) => {
-        document.querySelector("#offer_tariff > div.hubble-product__options-content-cta > a").click();
+        const accpectContainer = carousalContainer.previousElementSibling
+        const yesBtn = accpectContainer.querySelector("label")
+        yesBtn.click();
         e.preventDefault();
         this.goToCarrier(blockId)
       }
@@ -190,6 +190,10 @@ export default class Contracts {
           });
         }
       }
+
+        //display none for previous siblings for container - old carrier logos and yes/no buttons
+        container.previousElementSibling.style.display = 'none';
+        container.previousElementSibling.previousElementSibling.style.display = 'none';
     })
   }
 }
