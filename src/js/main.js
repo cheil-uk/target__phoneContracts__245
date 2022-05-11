@@ -41,6 +41,12 @@ cheillondon.targetBoilerplate = (function () {
           main.removeStuff()
           main.addElements()
 
+          $(document).on('change', function() {
+						setTimeout(() => {
+              main.phoneContracts.phoneContracts()
+						}, 900);
+					})
+
         } else {
           console.log('no jquery')
           _self.doEverythingTimeout()
