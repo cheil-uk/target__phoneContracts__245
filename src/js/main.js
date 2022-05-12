@@ -44,7 +44,7 @@ cheillondon.targetBoilerplate = (function () {
           $(document).on('change', function() {
 						setTimeout(() => {
               main.phoneContracts.phoneContracts()
-						}, 900);
+						}, 1000);
 					})
 
         } else {

@@ -190,10 +190,9 @@ export default class Contracts {
           });
         }
       }
-
-        //display none for previous siblings for container - old carrier logos and yes/no buttons
-        container.previousElementSibling.style.display = 'none';
-        container.previousElementSibling.previousElementSibling.style.display = 'none';
+      //display none for previous siblings for container - old carrier logos and yes/no buttons
+      container.previousElementSibling.style.display = 'none';
+      container.previousElementSibling.previousElementSibling.style.display = 'none';
     })
   }
 }
